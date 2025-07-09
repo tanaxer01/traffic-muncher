@@ -1,6 +1,3 @@
-import { group_by_cell } from './processing';
-
-//
 type Coords = {
 	top: number;
 	bottom: number;
@@ -55,9 +52,15 @@ type WazeResponse = {
 export async function fetch_waze({ top, bottom, left, right, env, types }: Coords & Opts): Promise<WazeResponse> {
 	const coords = `top=${top}&bottom=${bottom}&left=${left}&right=${right}`;
 	const opts = `env=${env}&types=${types}`;
+	const url = `/api/waze/georss?${coords}&${opts}`;
+	console.log(url);
 
-	console.log(`https://www.waze.com/live-map/api/georss?${coords}&${opts}`);
-	const res = await fetch(`https://www.waze.com/live-map/api/georss?${coords}&${opts}`);
+	const res = await fetch(url, {
+		method: 'GET',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+	});
 
 	if (!res.ok) {
 		throw new Error(`Failed to fetch Waze data: ${res.statusText}`);

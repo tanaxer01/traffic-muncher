@@ -1,25 +1,20 @@
 {
-	"name": "workflows-starter",
-	"version": "0.0.1",
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"start": "wrangler dev"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250417.0",
-		"typescript": "^5.0.4",
-		"wrangler": "^4.20.5"
-	},
-	"packageManager": "pnpm@9.1.4",
-	"engines": {
-		"pnpm": "^9.1.4"
-	},
-	"pnpm": {
-		"overrides": {
-			"esbuild": "0.21.4"
-		}
-	},
-	"dependencies": {
-		"h3-js": "^4.2.1"
-	}
+  "name": "traffic-muncher",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@types/leaflet": "^1.9.18",
+    "h3-js": "^4.2.1",
+    "leaflet": "^1.9.4"
+  }
 }

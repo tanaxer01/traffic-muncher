@@ -1,5 +1,5 @@
 import { latLngToCell } from 'h3-js';
-import { Alert } from './waze';
+import type { Alert } from './waze';
 
 // 1. ID Dedup
 function group_by_id(alerts: Alert[]) {
