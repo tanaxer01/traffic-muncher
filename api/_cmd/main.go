@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/tanaxer01/traffic-muncher/internal/api"
+	"github.com/tanaxer01/traffic-muncher/api/internal/routes"
 )
 
 func main() {
@@ -32,6 +32,6 @@ func main() {
 	// }
 	// fmt.Println("SHUTDOWN")
 
-	router := api.NewRouter()
+	router := routes.NewRouter()
 	router.Run(":" + port)
 }
