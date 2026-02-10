@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tanaxer01/traffic-muncher/api/internal/events"
+	"github.com/tanaxer01/traffic-muncher/api/_internal/events"
 )
 
 func CORSMiddleware() gin.HandlerFunc {

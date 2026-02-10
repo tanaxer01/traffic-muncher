@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/tanaxer01/traffic-muncher/api/internal/routes"
+	"github.com/tanaxer01/traffic-muncher/api/_internal/routes"
 )
 
 func main() {
